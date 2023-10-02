@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Navbar } from './components/Navbar'
 import Container from '@mui/material/Container'
+import { Player } from './components/Player'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Container style={{margin: '90px 0'}}>
           {children}
         </Container>
+        <Player />
       </body>
     </html>
   )

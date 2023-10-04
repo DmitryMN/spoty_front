@@ -1,9 +1,9 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { Navbar } from './components/Navbar'
-import Container from '@mui/material/Container'
-import { Player } from './components/Player'
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { Navbar } from './components/Navbar';
+import Container from '@mui/material/Container';
+import { Player } from './components/Player';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,11 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <Container style={{margin: '90px 0'}}>
-          {children}
-        </Container>
-        <Player />
+          <Navbar />
+          <Container style={{ margin: '90px 0' }}>
+            {children}
+          </Container>
+          <Player />
       </body>
     </html>
   )

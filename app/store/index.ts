@@ -1,11 +1,12 @@
-// import { Context, createWrapper } from 'next-redux-wrapper';
-// import { Store, createStore, applyMiddleware } from 'redux';
-// import thunk from 'redux-thunk';
-// import { rootReducer, RootState } from './reducers';
+import { configureStore } from "@reduxjs/toolkit";
+import { player } from "./reducers/player-slice";
 
 
+export const store = configureStore({
+    reducer: {
+        player: player
+    },
+});
 
-// export const store = (context: Context) => createStore(rootReducer);
-// // export an assembled wrapper
-// export const wrapper = createWrapper<Store<RootState>>(store, {debug: true});
-
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
